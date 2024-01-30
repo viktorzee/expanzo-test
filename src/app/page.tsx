@@ -118,7 +118,8 @@ export default function Home() {
                 variant="outlined"
                 value={hasStates === null ? 'all' : hasStates.toString()}
                 onChange={(e) => setHasStates(e.target.value === 'all' ? null : e.target.value.toLowerCase() === 'true' ? true : e.target.value.toLowerCase() === 'false' ? false : null)}
-                className="mb-3 md:w-1/5 "
+                className="md:w-1/5"
+                sx={{ mb: 3, }}
                 select
               >
                 <MenuItem value="all">All</MenuItem>
@@ -130,7 +131,8 @@ export default function Home() {
                 variant="outlined"
                 value={continentFilter === '' ? 'all' : continentFilter}
                 onChange={(e) => setContinentFilter(e.target.value === 'all' ? '' : e.target.value)}
-                className="mb-3 md:w-1/5 "
+                className="md:w-1/5 "
+                sx={{ mb: 3, }}
                 select
               >
                 <MenuItem value="all">All</MenuItem>
@@ -143,13 +145,14 @@ export default function Home() {
               <Box className="md:flex items-center">
                 <Button
                   variant="contained"
-                  className="bg-blue-500 hover:bg-blue-700 text-white mr-3"
+                  className="bg-blue-500 hover:bg-blue-700 text-white"
+                  sx={{mr: 3}}
                   onClick={handleFilter}
                 >
                   Apply Filter
                 </Button>
                 <Button
-                  variant="contained"
+                  // variant="contained"
                   className="bg-gray-500 hover:bg-gray-700 text-white"
                   onClick={handleRemoveFilter}
                 >
