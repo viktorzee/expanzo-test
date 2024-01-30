@@ -82,8 +82,6 @@ export default function Home() {
     SA: 'South America',
   };
   
-  console.log(data, "data")
-
   const uniqueContinentsData = Array.from(new Set(data.map((row) => row.continent))); // show unique continent data
 
   return (
@@ -101,12 +99,13 @@ export default function Home() {
             </Typography>
             <Box>
               <IconButton
+              disabled={loading}
                 onClick={() => {
                   setShowFilterInputs(!showFilterInputs);
                   // Reset filterApplied state when the filter icon is clicked
                   setFilterApplied(false);
                 }}
-                className={`bg-${filterApplied ? 'blue' : 'gray'}-500 hover:bg-${filterApplied ? 'blue' : 'gray'}-700 text-white`}
+                className={`bg-${filterApplied ? 'blue' : 'gray'}-500 hover:bg-${filterApplied ? 'blue' : 'gray'}-700 text-white disabled:cursor-not-allowed`}
               >
                 <FaFilter />
               </IconButton>           
