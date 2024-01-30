@@ -14,6 +14,8 @@ import IconButton from "@mui/material/IconButton";
 import { FaFilter } from "react-icons/fa";
 
 
+
+
 export default function Home() {
   const [data, setData] = useState<Country[]>([]);
   const [filteredData, setFilteredData] = useState<Country[]>([]);
@@ -102,7 +104,6 @@ export default function Home() {
               disabled={loading}
                 onClick={() => {
                   setShowFilterInputs(!showFilterInputs);
-                  // Reset filterApplied state when the filter icon is clicked
                   setFilterApplied(false);
                 }}
                 className={`bg-${filterApplied ? 'blue' : 'gray'}-500 hover:bg-${filterApplied ? 'blue' : 'gray'}-700 text-white disabled:cursor-not-allowed`}
@@ -152,7 +153,7 @@ export default function Home() {
                   Apply Filter
                 </Button>
                 <Button
-                  // variant="contained"
+                  variant="contained"
                   className="bg-gray-500 hover:bg-gray-700 text-white"
                   onClick={handleRemoveFilter}
                 >
