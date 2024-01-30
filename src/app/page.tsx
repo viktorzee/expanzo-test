@@ -9,10 +9,9 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import MenuItem from "@mui/material/MenuItem";
-import { MdOutlineFilterList, MdOutlineFilterListOff } from "react-icons/md";
 import { Country } from "@/types/model";
 import IconButton from "@mui/material/IconButton";
-import { FaFilter, FaTimes } from "react-icons/fa";
+import { FaFilter } from "react-icons/fa";
 
 
 export default function Home() {
