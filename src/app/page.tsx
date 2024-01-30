@@ -97,7 +97,7 @@ export default function Home() {
               id="tableTitle"
               component="div"
             >
-              Country Data
+              Countries of the world
             </Typography>
             <Box>
               <IconButton
